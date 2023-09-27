@@ -345,6 +345,9 @@ function atuladoScripts() {
 	wp_enqueue_style( 'atuladoFontAwesomeCss',
 	get_template_directory_uri() . '/assets/css/all.min.css');
 
+  wp_enqueue_style( 'atuladoCustomCss',
+  get_template_directory_uri() . '/assets/css/custom.css');
+
 	//wp_enqueue_script( 'kids4PeaceFontAwesomeJs','https://kit.fontawesome.com/2b6c4935bd.js', array( 'jquery' ), '', true);	
 	// wp_enqueue_script( 'kids4PeaceFontAwesomeJs',get_template_directory_uri() . '/assets/js/all.min.js', array( 'jquery' ), '', true);	
 	
@@ -375,5 +378,76 @@ function atuladoScripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'atuladoScripts' );
+
+function add_query_vars_filter( $vars ) {
+  $vars[] = "pg";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+
+add_shortcode( 'blog_feeds', 'blog_feeds_func' );
+function blog_feeds_func( $atts ) {
+  $a = shortcode_atts( array(
+    'perpage' => 10
+  ), $atts );
+  $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 10;
+  $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
+  $args = array(
+    'posts_per_page'=> $perpage,
+    'post_type'   => 'post',
+    'post_status' => 'publish',
+    'paged'     => $paged
+  );
+  $output = '';
+  ob_start();
+  $blogs = new WP_Query($args);
+  if ( $blogs->have_posts() ) { ?>
+  <div class="blog-feeds">
+    <div class="content-page">
+
+      <div class="articles">
+        <?php while ( $blogs->have_posts() ) : $blogs->the_post(); ?>
+          <article class="article-<?php the_ID() ?> <?php echo ( get_the_post_thumbnail() ) ? 'has-image':'no-image'?> animated fadeIn">
+            <div class="inner">
+              <?php if ( get_the_post_thumbnail() ) { ?>
+              <figure class="featimage" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>')">
+                <?php the_post_thumbnail() ?>
+              </figure> 
+              <?php } else { ?>
+              <figure class="noimage"></figure>
+              <?php } ?>
+              <div class="text">
+                <h2><?php the_title() ?></h2>
+                <div class="excerpt"><?php the_excerpt() ?></div>
+                <div class="postlink">
+                  <a href="<?php echo get_permalink() ?>">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        <?php endwhile; wp_reset_postdata(); ?>
+      </div>
+
+      <?php  
+      $total_pages = $blogs->max_num_pages;
+      if ($total_pages > 1) {
+      ?>
+      <div class="loadmore">
+          <a href="javascript:void(0)" class="loadmore-button" data-baseurl="<?php echo get_permalink(); ?>" data-totalpages="<?php echo $total_pages ?>" data-next="2">Load More</a>
+      </div>
+      <?php } ?>
+    </div>
+    <div id="hidden-content" style="display:none"></div>
+  </div>
+  <?php } 
+
+  $output = ob_get_contents();
+  ob_end_clean();
+
+  return $output;
+}
+
+
 
 /* -------------------------------------------------  */
