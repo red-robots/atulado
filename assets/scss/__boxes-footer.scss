@@ -1,0 +1,106 @@
+.before-interior-footer{
+  background-color: #ffffff;
+  background-image: url('../images/bg-rna-chain.svg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 90px 0 60px;
+  position: relative;
+  z-index: 5;
+  .item-col{
+    background-color: #ffffff;
+    border: none;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    &:hover, &:focus, &:active{
+      a{
+        text-decoration: none;
+      }
+      .box-page-link{
+        .title-post{
+          color: $secondary;
+        }
+        .bottom-post {
+          background-color: $orange;
+          .link-post{
+            //background-image: url('../images/plus-orange.png');
+          }
+        }
+      }
+    }
+    .box-page-link{ 
+      border-radius: 0 0 100px 0;
+      border: none;
+      overflow: hidden;
+      margin: 0px 15px;
+      padding: 0;
+      .featured-box-images{
+        background-color: $orange;
+        background-size: cover;
+        display: block;
+        margin: 0 auto 45px;
+        overflow: hidden;
+        padding-bottom: 71%;
+        position: relative;
+        transition: all 0.4s ease;
+        z-index: 0;        
+      }//.featured-box-images
+      .bottom-post{
+        background-color: $secondary;
+        padding: 42px 35px 45px;
+        text-align: left;
+        transition: all 0.4s ease;
+        .name-box{
+          @include font1;
+          color: #ffffff;
+          font-size: 30px;
+          font-stretch: normal;
+          font-style: normal;
+          font-weight: bold;
+          letter-spacing: normal;
+          line-height: normal;
+          margin-bottom: 0;
+          text-transform: uppercase;
+          h3{
+            @include font1;
+            color: #ffffff;
+            font-size: 30px;
+            font-stretch: normal;
+            font-style: normal;
+            font-weight: bold;
+            letter-spacing: normal;
+            line-height: normal;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+          }
+        }
+        .link-post{
+          background-image: url('../images/plus-white.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: inline-block;
+          height: 37px;
+          width: 37px;
+        }
+      }
+    }
+  }//.single-box
+}
+
+@include mediaqueries(1200max) {
+ 
+}
+@include mediaqueries(991max) {
+
+}
+@include mediaqueries(767max) {
+  
+}
+@include mediaqueries(480max) {
+ 
+}

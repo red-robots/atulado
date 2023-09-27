@@ -1,0 +1,22 @@
+body.single-post {
+
+}
+
+
+@include mediaqueries(1200max) {
+
+}
+@include mediaqueries(991max) {
+  
+} 
+@include mediaqueries(767max) {
+  	body.single-post {
+	  	.interior-page .title-page, .sc-single-wrapper .title-page{
+			text-align: left  !important;  		
+	  	}
+	
+	}
+}
+@include mediaqueries(480max) {
+  
+}

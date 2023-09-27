@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet"> 
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome CDN Kit's -->
+    <script src="https://kit.fontawesome.com/2b6c4935bd.js"></script>  
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="swiper-4.5.0/css/swiper.min.css">
+    <!-- gravity forms and Tribe events(don't include) -->
+    <link rel="stylesheet" href="css/formsmain.min.css">
+    <!-- gravity forms (don't include) -->
+
+    <title>Atulado Ministries</title>
+  </head>
+<body class="home">
+<!-- <span id="gotop"></span> -->
+
+<header class="header fixed-top"> 
+  <section class="search-section">
+    <div class="container">
+      <div class="search">
+         <form method="get" id="searchform" class="searchform" action="\">
+            <div>
+             <label class="screen-reader-text" for="s">Search for:</label>
+             <input type="text" value="" name="s" id="s">
+             <input type="submit" id="searchsubmit" value="Search">
+            </div>
+         </form>
+      </div>
+    </div>
+  </section>
+  <section class="header-navigation">
+   <!-- Menu Navigation -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <img src="images/logo.png" alt="logo" class="navbar-brand-desktop">
+            <!-- <img src="images/logo-color.svg" alt="logo fixed" class="navbar-brand-fixed"> -->
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#NavDropdown" aria-controls="NavDropdown" aria-expanded="false" aria-label="Toggle navigation">            
+          </button>
+        </div>
+        <div class="col-right d-flex flex-row">          
+          <div class="collapse navbar-collapse" id="NavDropdown">
+            <ul id="main_menu" class="nav navbar-nav">
+              <li class="dropdown menu-item-has-children active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">plan your visit</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown menu-item-has-children">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown menu-item-has-children">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">events</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Give</a>              
+              </li>    
+              <li class="dropdown menu-item-has-children">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">sermons</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li class="menu-item-has-children dropdown"><a href="#">Child</a>
+                     <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="menu-item-has-children dropdown"><a href="#">Child</a>
+                     <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown btn-give">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Give</a>              
+              </li>   
+            </ul>
+          </div> <!-- collapse navbar-collapse -->
+          <div class="header-toolbar d-flex justify-content-end align-items-center">
+            <button id="open-search"><i class="fas fa-search"></i></button> 
+            <ul class="top-menu">
+              <li class="menu-item btn-give"><a href="">give</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+    </div> <!-- container -->
+  </section>
+</header>
+
+<section class="section-a slider-widget">
+  <div class="slider-a">
+    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+      <div class="container bullets">
+        <ol class="carousel-indicators">         
+        </ol>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="slider-box">        
+            <figure class="bg-img" style="background-image:url('images/slider.jpg');"></figure>
+            <div class="container">
+              <div class="slider-caption">
+                <h2>Equip the local Church in Cuba to care for the needs of their communities</h2>
+                <a href="#" class="btn-1">Give</a>
+                <a href="#" class="btn-3">Join a Mission Trip</a>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="carousel-item">
+          <div class="slider-box">        
+            <figure class="bg-img" style="background-image:url('images/slider.jpg');"></figure>
+            <div class="container">
+              <div class="slider-caption">
+                <h2>Equip the local Church in Cuba to care <span>for the needs of their communities</span></h2>
+                <a href="#" class="btn-3">Join a Mission Trip</a>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+      <a class="carousel-control-prev" href="#home-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#home-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>  
+</section>
+
+<section class="section-b">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="welcome-box text-left">                   
+          <h2><span class="sub-title">Welcome to</span> Atulado Ministries</h2>
+          <p><strong>Atulado means “By Your Side” and we stand ready to support those who share the Gospel of Jesus Christ and disciple His followers.</strong></p>
+          <p>We support the leadership of the Church in Cuba as they share the Gospel of Jesus Christ and provide resources to their communities. Some of the resources we’ve delivered include reading glasses, blood pressure cuffs, Bible study materials, and more.</p>
+          <p>On our mission trips we have two goals; deliver resources and simply “Be”. Be there to encourage those we meet, be there to listen to those eager to tell their stories, and be there to pray with those we encounter. We invite you to “Be” part of our mission.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-12">
+        <figure class="image-welcome" style="">
+            <img src="images/welcome.png" alt="">
+        </figure>
+      </div>
+    </div> 
+  </div>
+</section>
+
+
+<section class="section-c">
+  <div class="container">
+    <div class="multiple-slider">
+      <div class="row">
+        <div class="col-12 col-lg-7 left-side-c">
+            <div class="image-sliders">
+
+            <div id="custom-slider-2" class="carousel carousel-sync slide carousel-fade" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="single-box">
+                  <div class="bg-img" style="background-image:url('images/DSCI1918.jpg');"></div>
+                </div>
+                <div class="single-box">
+                  <div class="bg-img" style="background-image:url('images/2019-01-23-13.23.14.jpg');"></div>
+                </div>
+                <div class="single-box">
+                  <div class="bg-img" style="background-image:url('images/2019-01-23-16.33.30.jpg');"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="custom-slider-3" class="carousel carousel-sync slide carousel-fade" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="single-box">
+                  <div class="bg-img" style="background-image:url('images/DSCI1918.jpg');"></div>
+                </div>
+                <div class="single-box">
+                  <div class="bg-img" style="background-image:url('images/2019-01-23-13.23.14.jpg');"></div>
+                </div>
+                <div class="single-box">
+                  <div class="bg-img" style="background-image:url('images/2019-01-23-16.33.30.jpg');"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 right-side-c">
+          <div id="custom-slider-4" class="carousel carousel-sync slide" data-ride="carousel">
+            <div class="container bullets">
+              <ol class="carousel-indicators">
+              </ol>
+            </div>
+            <div class="carousel-inner">
+
+              <div class="single-box" style="">
+                <p>Slider 1 ospel is shared with over tens of thousands of people each year door to door, in churches, or on the sports field.</p>  
+              </div>
+
+              <div class="single-box" style="">
+                <p>Slider 2 Through our partnerships, the Gospel is shared with over tens of thousands of people each year door to door, in churches, or on the sports field.</p>
+              </div>
+
+              <div class="single-box" style="">
+                <p>Slider 3 Through our partnerships, the Gospel is shared with over tens of thousands of people each year door to door, in churches, or on the sports field.</p>
+              </div>
+            </div>
+            <div class="controls-carousel">
+              <a class="carousel-control-prev left" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next right" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+   </div>
+  </div>
+</section>
+  
+<section class="section-d">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-lg-6 left-side-d">
+        <h2>Our Partner in Cuba</h2>
+        <div class="hr-70w"></div>
+        <p>Osmani Sosa is a follower of Christ, a father, a pastor, a teacher, and a baseball pitcher who played at the highest levels in Cuba.</p>
+        <p>God has entrusted him with the growth of a sports ministry which reaches more than 100,000 people each year through nearly 500 local churches.</p>
+      </div>
+      <div class="col-lg-6 right-side-d">
+        <figure class="img-partner">
+          <img src="images/img-d.jpg" alt="">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section-e">
+  <div class="container">
+    <div class="container-text">
+      <h2>Our Stories</h2>
+      <p>Read stories of lives being transformed when God creates an intersection between the paths of His people.</p>
+    </div>
+    <div class="row justify-content-center align-items-start justify-content-md-around justify-content-lg-between">
+      <div class="col-lg-4 col-md-6 col-12 m-bottom item_post">
+        <a href="#">
+          <div class="single-post">
+            <div class="top-post">
+              <div class="title-post">5 Minutes Can Change Your Life</div>
+              <div class="link-post">
+                <figure class="plus-link"></figure>
+              </div>
+            </div>
+            <div class="post-img">
+              <figure style="background-image: url('images/img-e-1.jpg');"></figure>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 m-bottom item_post">
+        <a href="#">
+          <div class="single-post">         
+            <div class="top-post">
+              <div class="title-post">News Story Title Lorem Ipsum Dolor Sit</div>
+              <div class="link-post">
+                <figure class="plus-link"></figure>
+              </div>
+            </div>
+            <div class="post-img">
+              <figure style="background-image: url('images/img-e-2.jpg');"></figure>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 m-bottom item_post">
+        <a href="#">
+          <div class="single-post">         
+            <div class="top-post">
+              <div class="title-post">News Story Title Lorem Ipsum Dolor Sit</div>
+              <div class="link-post">
+                <figure class="plus-link"></figure>
+              </div>
+            </div>
+            <div class="post-img">
+              <figure style="background-image: url('images/img-e-3.jpg');"></figure>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sign-up-form">
+  <figure class="bg-image-newsletter" style="background-image: url('images/bg-newsletter.jpg');"></figure>
+  <div class="container">
+    <div class="box-container-form row flex-lg-row flex-md-column-reverse flex-column-reverse">
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="gf_browser_gecko gform_wrapper" id="gform_wrapper_2">
+          <form method="post" enctype="multipart/form-data" id="gform_2" action="/">
+            <div class="gform_heading">
+              <h3 class="gform_title">Subscribe to our newsletter</h3>
+            </div>
+            <div class="gform_body">
+              <ul id="gform_fields_2" class="gform_fields top_label form_sublabel_below description_below">
+                <li id="field_2_1" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                  <label class="gfield_label" for="input_2_1">Name</label>
+                  <div class="ginput_container ginput_container_text">
+                    <input name="input_1" id="input_2_1" type="text" value="" class="medium" placeholder="Name" aria-invalid="false">
+                  </div>
+                </li>
+                <li id="field_2_2" class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                  <label class="gfield_label" for="input_2_2">Email</label>
+                  <div class="ginput_container ginput_container_email">
+                    <input name="input_2" id="input_2_2" type="text" value="" class="medium" placeholder="Email" aria-invalid="false">
+                  </div>
+                </li>
+              </ul>
+            </div>           
+            <div class="gform_footer top_label">
+              <input type="submit" value="Subscribe to our Newsletter" id="gform_submit_button_2" class="gform_button button" onclick="if(window[&quot;gf_submitting_2&quot;]){return false;}  window[&quot;gf_submitting_2&quot;]=true;  " onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_2&quot;]){return false;} window[&quot;gf_submitting_2&quot;]=true;  jQuery(&quot;#gform_2&quot;).trigger(&quot;submit&quot;,[true]); }"> 
+              <input type="hidden" class="gform_hidden" name="is_submit_2" value="1">
+              <input type="hidden" class="gform_hidden" name="gform_submit" value="2">            
+              <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+              <input type="hidden" class="gform_hidden" name="state_2" value="WyJbXSIsIjMxNDFmYzI0YWM0OTVmYjNlODYzNzhkZGI2YmY4OGM2Il0=">
+              <input type="hidden" class="gform_hidden" name="gform_target_page_number_2" id="gform_target_page_number_2" value="0">
+              <input type="hidden" class="gform_hidden" name="gform_source_page_number_2" id="gform_source_page_number_2" value="1">
+              <input type="hidden" name="gform_field_values" value="">              
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="newsletter-message">
+          <p><strong>Stay up-to-date</strong> with stories from our mission trips, resources provided, and how we’ve impacted communities</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section> 
+<section class="section-f get-started">
+  <div class="container">
+    <h2>Ready to join our mission? <strong>Get started today!</strong></h2>
+    <div class="row justify-content-center align-items-center">
+   
+        <div class="col-lg-5 item-join d-flex justify-content-center align-items-center">
+          <figure class="icon" style="background-image: url('images/icon-f-1.svg');"></figure>
+          <div class="info-item">
+            <span><a href="#">Give</a> to help provide communities with resources they need</span>
+          </div>
+        </div>        
+      
+        <div class="col-lg-5 item-join d-flex justify-content-center align-items-center">
+          <figure class="icon" style="background-image: url('images/icon-f-2.svg');"></figure>
+          <div class="info-item">
+            <span><a href="#">Give</a> to help provide communities with resources they need</span>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-social-feed">
+      <div class="header-social-feed">
+        <h3>Follow Us on Instagram</h3>
+        <a href="https://www.instagram.com/atulado/" class="profile-instagram" target="_blank">@Atulado</a>
+      </div>
+        <div class="grid-container">
+        
+          <div class="grid-item size-box-1">
+          <!-- start single_feed -->
+            <div class="single_feed instagram" data-sort-by="instagram" data-category="instagram">
+              <a rel="nofollow" href="https://instagram.com/postlink">
+                <div class="image_feed">
+                  <figure class="img_feed" style="background-image: url('images/feed-1.jpg')">
+                  </figure>
+                </div>
+                <div class="body_feed">
+                  <div class="text_feed">
+                    Lorem ipsum dolor sit, consectetur adipiscing elit. Quisque augue ipsum dolor sit consectetur adipisci.
+                  </div>
+                  <div class="footer_feed">         
+                    <span class="date-elapsed">Sep 28</span>
+                    <div class="icon_feed">
+                      <i class="fab fa-instagram"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          <!-- end single_feed -->
+          </div>
+  
+          <div class="grid-item size-box-1">
+            <!-- start single_feed -->
+              <div class="single_feed instagram" data-sort-by="instagram" data-category="instagram">
+                <a rel="nofollow" href="https://instagram.com/postlink">
+                  <div class="image_feed">
+                    <figure class="img_feed" style="background-image: url('images/feed-2.jpg')">
+                    </figure>
+                  </div>
+                  <div class="body_feed">
+                    <div class="text_feed">
+                      Lorem ipsum dolor sit, consectetur adipiscing elit. Quisque augue ipsum dolor sit consectetur adipisci.
+                    </div>
+                    <div class="footer_feed">         
+                      <span class="date-elapsed">Sep 28</span>
+                      <div class="icon_feed">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            <!-- end single_feed -->
+          </div>
+  
+          <div class="grid-item size-box-1">
+            <!-- start single_feed -->
+              <div class="single_feed instagram" data-sort-by="instagram" data-category="instagram">
+                <a rel="nofollow" href="https://instagram.com/postlink">
+                  <div class="image_feed">
+                    <figure class="img_feed" style="background-image: url('images/feed-3.jpg')">
+                    </figure>
+                  </div>
+                  <div class="body_feed">
+                    <div class="text_feed">
+                      Lorem ipsum dolor sit, consectetur adipiscing elit. Quisque augue ipsum dolor sit consectetur adipisci.
+                    </div>
+                    <div class="footer_feed">         
+                      <span class="date-elapsed">Sep 28</span>
+                      <div class="icon_feed">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            <!-- end single_feed -->
+          </div>
+        
+        </div>
+    </div>
+    <div class="footer-top"> 
+      <div class="row justify-content-between align-items-center justify-content-md-center">
+        <div class="col-lg-3 col-md-8 col-12">         
+          <figure class="logo-footer" style="background-image: url('images/logo-footer.png');"></figure>       
+        </div>
+        <div class="col-lg-7 col-md-5 col-12 footer-top-left d-flex align-items-center justify-content-lg-end justify-content-md-between justify-content-center flex-wrap flex-md-nowrap">
+          <div class="item-info">
+            <h4>Contact Us</h4>
+            <p><a href="mailto:contact@atuladoministries.com">contact@atuladoministries.com</a></p>
+          </div>          
+        </div>
+        <div class="col-lg-2 col-md-5 col-12 social-footer">
+          <h4>Follow Us</h4>
+          <ul class="social-network">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul> 
+        </div>        
+      </div>     
+    </div>
+    <div class="footer-bottom">
+      <div class="copy-r">
+        <p>Copyright © 2019 <strong>Atulado Ministries</strong>. All rights reserved. <div class="elevationweb"> <a href="http://www.elevationweb.org/" target="_blank" title="Websites for nonprofits">Web design </a> by <a href="http://www.elevationweb.org/our-work/" target="_blank" title="Elevation Web">Elevation Web</a></div></p>
+      </div>      
+    </div>
+  </div>
+</footer>
+
+  <!--script-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile.custom.min.js"></script>  
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/main-height-box.js"></script>
+  <!-- Swiper JS -->
+  <script src="swiper-4.5.0/js/swiper.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+</body>
+</html>

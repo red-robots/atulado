@@ -1,0 +1,172 @@
+/*START Buttons------------------------------------------*/
+a, button, li{  
+  &.btn-1, &.btn-white {
+    background-color: $white;
+    border-radius: 25.5px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    color: $blue !important;
+    display: inline-block;
+    font-family: 'Lato', sans-serif !important;    
+    font-size: 18px !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    letter-spacing: normal !important;
+    line-height: 1 !important;
+    max-width: 100%;
+    min-width: 180px;
+    padding: 12px 35px;
+    position: relative;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+    &:hover,&:focus,&:active{
+      background: $blue;
+      box-shadow: none;
+      border-color: $blue;
+      color: $white !important;
+      text-decoration: none;
+    }
+  }
+  
+  &.btn-2, &.btn-blue-light{
+    background-color: $blue-light;
+    border-radius: 25.5px;
+    border: none;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    color: $white !important;
+    display: inline-block;
+    font-family: 'Lato', sans-serif !important;    
+    font-size: 18px !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    letter-spacing: normal !important;
+    line-height: 1 !important;
+    max-width: 100%;
+    min-width: 180px;
+    padding: 12px 35px;
+    position: relative;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: none;
+    transition: all 0.4s ease;
+    &:hover,&:focus,&:active{
+      background: $blue-light;
+      box-shadow: none;
+      color: $black !important;
+      text-decoration: none;
+    }
+    &.blue{
+      background-color: $blue-dark !important;
+      box-shadow: none;
+      &:hover,&:focus,&:active{
+        background: $blue-light !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  &.btn-3, &.btn-transparent{
+    background-color: transparent;
+    border-radius: 25.5px;
+    border: 2px solid $white;
+    box-shadow: none;
+    color: $white !important;
+    display: inline-block;
+    font-family: 'Lato', sans-serif !important;    
+    font-size: 18px !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    letter-spacing: normal !important;
+    line-height: 1 !important;
+    max-width: 100%;
+    min-width: 190px;
+    padding: 12px 38px;
+    position: relative;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: none;
+    transition: all 0.4s ease;
+    &.red{
+      border-color: $red !important;
+      color: $red !important;
+      &:hover,&:focus,&:active{
+        background: $red !important;
+        color: $white !important;
+      }
+    }
+    &.blue-light{
+      border-color: $blue-light !important;
+      color: $blue-light !important;
+      &:hover,&:focus,&:active{
+        background: $blue-light !important;
+        color: $white !important;
+      }
+    }
+    &.blue{
+      border-color: $blue !important;
+      color: $blue !important;
+      &:hover,&:focus,&:active{
+        background: $blue !important;
+        color: $white !important;
+      }
+    }
+    &:hover,&:focus,&:active{
+      background: $white;
+      box-shadow: none;
+      color: $blue !important;
+      text-decoration: none;
+    }
+  }
+
+  
+
+  &.btn-read-more{
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    color: $red !important;
+    display: inline-block;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
+    line-height: 1 !important;
+    margin: 15px auto; 
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    text-decoration: underline !important;
+    text-transform: capitalize;
+    transition: all 0.4s ease; 
+    &::after{
+      content: none;
+      /*background-image: url('../images/arrow-read-more-white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 10px;
+      position: absolute;
+      right: 24px;
+      top: 30%;
+      transition: all 0.4s ease; 
+      width: 7px;*/
+    }    
+    &:hover,&:focus,&:active{
+      color: $blue-light;
+      text-decoration: none;
+     /* &::after{
+        right: 10px;
+      }*/
+    }
+  }
+
+}
+
+/*END Buttons-------------------------------------*/

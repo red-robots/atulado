@@ -1,0 +1,167 @@
+.sidebar-interior-page{
+  .item-sidebar{
+    margin-bottom: 30px;
+    .sidebar-menu-toggle{
+      a{
+        text-decoration: none;
+        border-bottom: none;
+      }
+      > ul{
+        background: $white;
+        border-radius: 0;
+        border: none;
+        box-shadow: 0px 6px 22px 13px rgba(0, 0, 0, 0.15); 
+        display: block;
+        margin-bottom: 0;
+        margin-bottom: 10px; 
+        padding-left: 0;
+        padding: 30px 0 15px;
+        > li{
+          background: $white;
+          display: block;
+          list-style-type: none;
+          padding: 0px;
+          a{
+            @include font1;
+            background:transparent;
+            border-bottom: none;
+            color: #484a4c;
+            display: block;
+            font-size: 16px;
+            font-style: initial;
+            font-weight: 400;      
+            line-height: 1.1em;
+            padding: 5px 25px;
+            position: relative;
+            text-align: left;  
+            text-transform: capitalize;
+            transition: all ease-in-out 0.4s;
+            &:hover{
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+          &.title{
+            @include font3;
+            border-bottom: none;
+            color: $blue-light;
+            display: block;
+            font-size: 27px;
+            font-weight: 800;
+            line-height: 1em;
+            padding: 0 25px 15px;
+            text-align: left;
+            text-transform: uppercase;
+          }
+          /*when has active is in li*/
+          &.current-menu-ancestor.current-menu-parent{
+            ul.sub-menu{
+              display: block;
+              li.page_item{
+                > a{
+                  background-color: $orange;
+                  color: $white;
+                  &::before{
+                    border-left:4px solid $white;
+                  }               
+                }
+              }
+            }
+          }       
+          &.menu-item-has-children{
+            ul.sub-menu{
+              display: none;
+              li{
+                a{
+                  font-weight: 300;
+                  &::before{
+                    content:"";
+                    border-bottom:4px solid transparent;
+                    border-left:4px solid $blue-light;
+                    border-top:4px solid transparent;
+                    display: inline-block;        
+                    left: 0;
+                    margin-left: 0;
+                    margin-right: 5px;
+                    margin-bottom: 2px;
+                    position: relative;
+                    width: 6px; height: 6px;
+                  }
+                }
+              }
+            }
+          }
+          /*global parent */
+          > ul{
+            padding: 0 0 10px;
+            li{
+              display: block;
+              padding: 0px;
+              list-style-type: none;
+              a{
+                padding: 6px 25px 6px 40px !important;                
+              }
+              > ul{
+                padding: 0;
+                li{
+                  a{
+                    padding-left: 60px !important;
+                    &::before{
+                      border-left:4px solid $orange !important;
+                    }
+                  }
+                }
+              }
+            }
+          }              
+        }
+      }
+    }
+    .btn-donate{
+      display: block;
+      color: $white !important;
+      font-weight: 700;
+      background: $orange-dark;
+      padding: 11px 35px;
+    }
+    .news-box{
+      box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.15);
+      .news-img{
+        height: 250px;
+        time{
+          display: none;
+        }        
+      }
+      .news-info{
+        padding: 25px;
+        h3{
+          margin: 0;
+          color: $blue-light;
+          a{
+            color: $blue-light;
+            margin: 0 0 15px 0;
+            text-decoration: none;
+          }
+        }
+        a.read-more{
+          color: #020308;
+          font-size: 16px;
+          font-weight: 400;
+          text-decoration: none;
+           &::after{          
+            content: "\f0da";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            /*--adjust as necessary--*/
+            color: #020308;
+            display: inline-block;
+            font-size: 15px;
+            padding-left: 5px;  
+          }
+        }
+      }
+    }
+  }
+}

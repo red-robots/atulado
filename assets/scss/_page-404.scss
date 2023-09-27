@@ -1,0 +1,52 @@
+body.error404{
+	#NavDropdown ul li a, #NavDropdown ul li.open a{
+    color: #333333;
+	}
+}
+.page-error{
+	height: 90vh;
+	background-color: #f4f4f4;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.container{
+		position: relative;
+		height: 100%;
+		.container-404{
+			@include center(-50%,-50%);
+			left: 50%;
+			top: 50%;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			.image-404{
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: block;
+				height: 300px;
+				margin: 0 auto;
+				max-width: 100%;
+				width: 500px;
+			}
+			.page-not-found{
+				span{
+					text-transform: uppercase;
+					color: #009ece;
+					line-height: 1em;
+					font-size: 50px;
+					font-weight: 900;
+				}
+			}
+			a.btn-orange{
+				margin: 20px auto 0;
+			}
+		}
+	}
+}
+
+@include mediaqueries(767max) { 
+	.page-error {
+	  height: 70vh;
+	}
+}

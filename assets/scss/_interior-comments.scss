@@ -1,0 +1,207 @@
+#comments{
+	h2.comments-title{
+		@include font3;
+    color: #04d282 !important;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1em;
+    margin-bottom: 10px;
+	}
+	.count-comments{
+		@include font3;
+    color: $blue-light !important;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1em;
+    margin-bottom: 10px;
+	}
+	ol.comment-list{
+		border-bottom: 1px solid #c7c7c7;
+		counter-reset: none;
+		list-style-type: none;
+		margin: 30px 0;
+		padding: 20px 0;
+		li{
+			counter-increment: none;
+			padding: 0;
+			margin: 0 0 50px 0;			
+			display: block;
+			&::before{
+				content: none;
+			}
+			ol{
+				margin-top: 30px;
+				padding-left: 20px;
+				li{
+					padding-left: 50px !important;
+				}
+			}
+		}
+		.comment-body{
+			padding-left: 120px;
+			position: relative;
+			.comment-author.vcard{
+				//padding-left: 120px;
+				img{
+					border-radius: 50%;
+					border: 5px solid #e2e2e2;
+					height: 100px;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100px;
+				}
+				cite, a.url{
+					@include font1;
+					color: #2c2c2c;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 700;
+					text-decoration: none;
+				}				
+				.says{
+					display: none;
+				}
+			}
+			.comment-meta {
+				font-size: 15px !important;
+				a{
+					text-decoration: none;
+					font-size: 15px !important;
+					font-weight: 400;
+					position: relative;
+					&::before{                  
+			      content: "\f017";
+			      font-family: FontAwesome;
+			      font-style: normal;
+			      font-weight: normal;
+			      text-decoration: inherit;
+			      /*--adjust as necessary--*/
+		  			color: #aaaaaa;     
+						font-size: 17px; 
+			      display: inline-block;
+			      position: relative;
+			      margin-right: 10px;
+			    }
+				}
+				.comment-edit-link{
+					font-size: 14px;
+					margin-left: 20px;
+					&::before{
+						content: "\f044";
+						font-family: FontAwesome;
+			      font-style: normal;
+			      font-weight: normal;
+			      text-decoration: inherit;
+			      /*--adjust as necessary--*/
+		  			color: #aaaaaa;     
+						font-size: 17px; 
+			      display: inline-block;
+			      position: relative;
+			      margin-right: 5px;
+					}
+				}
+			}
+			h1, h2, h3, h4, h5, h6{
+				font-size: 22px;
+				margin-bottom: 5px;
+			}
+			p, p a, p strong{
+				font-size: 18px;			
+				font-weight: 400;
+			}
+			h1, h2, h3, h4, h5, h6, p, a, strong {
+				@include font1;
+				color: #727272;
+				line-height: 1.4em;
+				margin: 0;
+			}
+
+		}
+		.reply a{
+			@include font1;
+			color: #aaaaaa;
+			font-size: 17px;
+			font-weight: 300;
+			line-height: 1em;
+			margin-top: 20px;
+			position: relative;
+			text-decoration: none;
+      display: inline-block;
+			&::before{                  
+	      content: "\f075";
+	      font-family: FontAwesome;
+	      font-style: normal;
+	      font-weight: normal;
+	      text-decoration: inherit;
+	      /*--adjust as necessary--*/
+  			color: #aaaaaa;     
+				font-size: 17px; 
+	      display: inline-block;
+	      position: relative;
+	      margin-right: 10px;
+	    }
+		}
+	}
+	.comment-respond{
+		.comment-reply-title{
+			@include font3;
+			color: #0aaacb;
+			font-size: 28px;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+		/*form Comments*/
+		#commentform{
+			p.logged-in-as{
+				margin: 0;
+			}
+			.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url{
+				label{
+					@include font1;
+					color: #2c2c2c;
+					font-size: 20px;
+					font-weight: 900;
+					display: block;
+				}
+				textarea, input{
+					border-radius: 4px;
+					border: 1px solid #c9c9c9;
+					color: #2c2c2c;
+					display: block;
+					padding: 7px 10px;
+					width: 100%;
+				}
+			}
+			.comment-form-email, .comment-form-url{
+				width: 48%;
+				display: inline-block;
+			}
+			.comment-form-url{
+				margin-left: 2%;
+				float: right;
+			}
+			.form-submit{
+				input[type="submit"]{
+					@include font1;      
+			    background: #0165ae;
+			    border-radius: 30px;
+			    border: none;
+			    color: #fff !important;
+			    display: inline-block;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 1em;
+			    margin: 20px auto; 
+			    max-width: 100%;
+			    padding: 12px 20px;
+			    position: relative;
+			    text-align: center;
+			    text-decoration: none !important;
+			    text-transform: uppercase;
+			    transition:0.4s;
+				}
+			}
+		}
+	}
+}

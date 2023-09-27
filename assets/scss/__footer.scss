@@ -1,0 +1,210 @@
+/*START footer------------------------*/
+
+footer.footer{
+  background-color: $secondary; 
+  padding: 40px 0 0;
+  position: relative;
+  .container {
+    //max-width: 900px;
+  }
+  .footer-top{
+    background: transparent;  
+    padding: 70px 0 60px;
+    position: relative;
+    &::after{
+      content: "";
+      background: #ffffff;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .logo-footer{
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 73px;
+      margin: 0 auto;
+      width: 260px;
+    } 
+    .item-info{
+      width: 270px;
+    }
+    .footer-top-left, .footer-top-left p, a, .item-info{
+      @include font1;
+      color: $white;
+      display: inline;
+      font-size: 18px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: normal;
+    } 
+    .btn-contact{
+      display: block;
+    }   
+    h4{
+      @include font1;
+      color: #ffffff;
+      font-size: 18px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: normal;
+      line-height: 1;
+    }
+    p{
+      @include font1;
+      color: #ffffff;
+      font-size: 16px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 1.3 !important;
+      margin-bottom: 0;
+    }
+    .social-footer{
+      text-align: right;
+    }
+    ul.social-network{      
+      display: inline-block;
+      font-size: 0;
+      line-height: 1em;
+      margin: 0 !important;
+      padding: 0;
+      text-align: right !important;
+      vertical-align: top;
+       li{
+        display: inline-block;
+        font-size: 16px;
+        margin: 0 0 0 10px !important;
+        a{
+          background-color: $white;
+          border-radius: 50%;
+          border: none;
+          color: $blue-dark;
+          display: inherit;
+          height: 24px;
+          margin: 0;
+          position: relative;
+          transition: all 0.4s ease;
+          width: 24px;
+          i{
+            @include center(-50%,-50%);
+            color: $blue-dark;
+            font-size: 14px;
+            font-stretch: normal;
+            font-style: normal;
+            font-weight: normal;
+            left:50%;
+            letter-spacing: normal;
+            line-height: 1.8;
+            position: absolute;
+            text-align: center;
+            top:50%;
+          }
+          &:hover{
+            background: $blue-light;
+            color: $white;
+            i{
+              color: $white;
+            }
+          }
+        }
+      } 
+    }
+  } 
+  .footer-bottom{
+    background: transparent;
+    padding: 14px 0; 
+    text-align: center;
+    position: relative;
+    &::before{
+      content: "";
+      background-color: #ffffff;
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    .copy-r{
+      float: none;      
+      position: relative;
+    }  
+    .elevationweb{
+      float: none;      
+    }
+    .copy-r, .elevationweb, p{
+      color: #ffffff;      
+      display: inline-block;
+      font-size: 16px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      margin-bottom: 0;
+      strong{
+        font-weight: bold;
+      }
+      a{
+        @include font3;
+        color: #ffffff!important;
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        &:hover{
+          text-decoration: underline;
+        }
+      } 
+    }
+    .classic-text-widget{
+      display: block !important;
+    }
+  }
+  .fixed-footer{
+    display: none;
+  }
+}
+@include mediaqueries(1200max){
+ 
+}
+@include mediaqueries(991max) {
+  footer.footer .footer-top {
+    padding: 60px 0;
+    .logo-footer{
+      margin-bottom: 40px !important;
+    }
+  }
+}
+@include mediaqueries(767max) { 
+  footer.footer .footer-top {
+    padding: 35px 0;
+    .item-info{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .social-footer{
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}
+@include mediaqueries(576max) { 
+  footer.footer .footer-top ul.social-network li{
+    margin: 0 5px !important;
+  }
+}
+
+/*END footer------------------------------------------*/

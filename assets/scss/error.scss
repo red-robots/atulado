@@ -1,0 +1,75 @@
+/*START Error Page------------------------------------------*/
+
+.fourerror{
+  text-align: center;
+  .fa-exclamation-circle{
+    font-size: 8rem;
+    color:$text;
+  }
+  h1{
+    font-size: 10.214rem;
+    margin: 0;
+    font-family: lato-eb;
+    color:$principal;
+  }
+  h2{
+    &::after{
+      content: none;
+    }
+  }
+  p{
+    line-height: 2em;
+  }
+  .search{
+    margin: 25px 10%;
+    width: 80%;
+    #searchform{
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.4s ease 0s;
+      display: block;
+      width: 100%;
+    }
+    #s,#searchsubmit{
+      display: inline-block;
+      margin: 0;
+      vertical-align: top;
+      width:25%;
+    }
+    #s{
+      width:70%;
+    }
+    #searchsubmit{
+      margin-left: -5px;
+    }
+  }
+}
+.interior{
+  .gform_confirmation_wrapper {
+    font-size: 25px;
+  }
+}
+.footer{
+  .gform_wrapper {
+    .validation_error{
+      color:#FFB3B3;
+      border-color: #FFB3B3;
+    }
+
+  }
+  .gform_wrapper.gform_validation_error{
+    .gform_body ul.gform_fields li.gfield .ginput_container input{
+      color:#000;
+    }
+  }
+  .gform_confirmation_wrapper {
+    display: block;
+    width: 100%;
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 25px;
+  }
+}
+
+/*END Error Page------------------------------------------*/

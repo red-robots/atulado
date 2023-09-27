@@ -1,0 +1,242 @@
+//.gform_wrapper::not(#gform_wrapper_3)
+.gform_wrapper{
+  .gform_body{
+    ul.gform_fields li.gfield{
+    .ginput_container_radio{
+      /*RADIO Button circular style*/
+        ul.gfield_radio{
+          li{
+            input {
+              cursor: pointer;
+              height: 100%;
+              opacity: 0;
+              position: absolute;
+              width: 100%;
+              z-index: 1;
+            }            
+            [type="radio"]:checked + label,
+            [type="radio"]:not(:checked) + label {
+              @include font1;
+              color: $black;
+              cursor: pointer;
+              display: inline-block !important;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 1em;
+              margin: 0 auto ;
+              padding: 0 0 0 25px!important;
+              position: relative;
+              vertical-align: middle;
+              z-index: 1;
+              &::after{
+                content: "" ;
+                -webkit-transition: all 0.2s ease;
+                background: $blue;
+                border-radius: 50%;
+                border: 4px solid $blue;
+                height: 14px;
+                left: 0;
+                position: absolute;
+                top: 1px;
+                transition: all 0.2s ease;
+                width: 14px;
+                z-index: -1;
+              }        
+            }
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+              position: absolute;
+              left: -9999px;
+              margin: 0!important; 
+            }
+            [type="radio"]:not(:checked) + label:after {
+              content: "" ;
+              transition: all 0.2s ease;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+              border: 4px solid #939382;
+              background: transparent;
+            }      
+          }
+        }
+      }
+      /*checkbox*/
+      .ginput_container_checkbox{
+        ul.gfield_checkbox{
+          li{
+            input {
+              cursor: pointer;
+              height: 100%;
+              opacity: 0;          
+              position: absolute;
+              width: 100%;
+              z-index: 1;
+            } 
+            [type="checkbox"]:checked + label,
+            [type="checkbox"]:not(:checked) + label {
+              @include font1;
+              color: $black;
+              cursor: pointer;
+              display: inline-block !important;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 1em;
+              margin: 0 auto ;
+              padding: 0 0 0 25px!important;
+              position: relative;
+              vertical-align: middle;
+              z-index: 1;
+              &::after{
+                content: "" ;
+                -webkit-transition: all 0.2s ease;
+                background: $blue;
+                border-radius: 0;
+                border: 4px solid $blue;
+                height: 15px;
+                left: 0;
+                position: absolute;
+                top: 1px;
+                transition: all 0.2s ease;
+                width: 15px;
+                z-index: -1;
+              }     
+            }
+            [type="checkbox"]:checked,
+            [type="checkbox"]:not(:checked) {
+              position: absolute;
+              left: -9999px;
+              margin: 0!important; 
+            }
+            [type="checkbox"]:checked + label{  
+              &::before{
+                content: "\f00c";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                /*--adjust as necessary--*/      
+                color: #fff;
+                display: inline-block;
+                font-size: 12px;
+                left: 1px;
+                position: absolute;
+                top: 0px;
+              } 
+            }
+            [type="checkbox"]:not(:checked) + label:after {
+              content: "" ;
+              transition: all 0.2s ease;
+              -webkit-transition: all 0.2s ease;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+              border: 4px solid #939382;
+              background: transparent;
+            }
+          }  
+        }
+      }
+      /*field address */
+      .ginput_container_address {
+        .address_country{
+          select{
+            padding: 5px 4px;
+            line-height: 1em !important;
+          }
+        }
+      }
+      .top_label .gfield_label{
+        @include font1;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.67;
+        letter-spacing: normal;
+        color: #6c6b6b;
+      }
+    }    
+  }
+}
+  .gform_wrapper .gform_footer{
+    input[type="submit"], input.button{
+      @include font3;
+      background: $principal;
+      border-radius: 25px;
+      border: none;
+      color: #ffffff!important;
+      display: inline-block;
+      font-size: 18px !important;
+      font-stretch: normal !important;
+      font-style: normal !important;
+      font-weight: bold !important;
+      letter-spacing: normal !important;
+      line-height: normal !important;
+      margin: 20px auto; 
+      max-width: 100%;
+      padding: 16px 30px 15px;
+      position: relative;
+      text-align: center;
+      text-decoration: none !important;
+      text-transform: none;
+      transition: all 0.4s ease;        
+      &:hover,&:focus,&:active{
+        background: $dark-principal;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+.interior .gform_confirmation_wrapper{
+  font-size: 18px !important; 
+  color: #825d22 !important;
+}
+.gform_confirmation_wrapper {
+  .gform_confirmation_message{
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    background: transparent;
+    padding: 10px 20px;
+  }
+}
+
+.gform_wrapper{ 
+  input:not([type="submit"]),textarea,select{
+    background: #f0f0f0;
+    border-radius: 3px;
+    border: 1px solid #dad8d8;
+    box-shadow: none;
+    color: $text;
+    min-height: 50px;
+    padding: 3px 10px !important;
+    &:active,&:focus{
+      box-shadow:0 0 4px rgba(0,0,0,.2);
+      outline: none;
+    }
+  }
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/select-arrow.png') 98%/auto no-repeat #f0f0f0;
+    padding: 10px !important;
+  }
+  textarea{
+    height: 100px;
+    resize:none;
+    max-width: 100%;
+  }
+  input[type="checkbox"],input[type="radio"]{
+    height: 15px;
+  }  
+  label.gfield_label{
+    @include font1;
+    font-size: 18px !important;
+    font-weight: 700;
+    margin:10px 0 0 0;
+  }
+}
+.gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label{
+  margin-bottom: 7px !important;
+}

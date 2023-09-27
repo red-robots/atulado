@@ -1,0 +1,137 @@
+/*START Interior Top (BANNER)--------------------------------------------------*/
+.interior-banner {
+  background-color: #fff;
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 375px;
+  overflow: hidden;  
+  position: relative;
+   z-index: 5;
+  &::before{
+     content:"";
+     opacity: 0.34;
+     background-color: #2d2d2d;
+    height: 100%;
+     position: absolute;
+     width: 100%;
+     z-index: 7;
+   } 
+  .container{
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+  }
+  .title-page{
+    @include center(0, 0);
+    bottom: unset;
+    left: 0;     
+    max-width: 80%;
+    min-width: auto;
+    position: absolute;
+    text-align: left !important;
+    top: 50%;
+    width: 70%;
+    z-index: 15;
+    h1{     
+      @include font1;
+      color: $white;     
+      font-family: Lato;
+      font-size: 44px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: 0.95px;
+      line-height: normal;
+      text-shadow: 0 2px 30px #000000;
+      strong{
+        color: $blue-light;
+        display: block;
+        font-family: Lato;
+        font-size: 44px;
+        font-stretch: normal;
+        font-style: italic;
+        font-weight: bold;
+        letter-spacing: 0.95px;
+        line-height: normal;
+        text-shadow: 0 2px 30px #000000;
+      }
+    }
+    p{
+      @include font2;
+      color: $white;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.5;
+      margin: 0;
+      text-align: center;
+    }   
+  }
+  .trip-banner-button{
+    .btn-2{
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      font-size: 20px !important;
+      margin-top: 5px;
+    }
+  }
+  &.i-singular-post, &.i-single{
+    .title-page{
+      h1{ 
+        font-size: 45px !important;
+      }
+    }
+  }
+}
+/*END Interior Top (BANNER)------------------------------------------*/
+
+@include mediaqueries(1200max) {
+  
+}
+@include mediaqueries(991max) {
+  .interior-banner {
+    min-height: 265px;
+    .title-page{
+      left: 15px;
+      h1{
+        
+      }
+    }
+    .trip-banner-button{
+      .btn-2{
+        left: 50%;
+      }
+    }
+  }
+}
+@include mediaqueries(767max) { 
+  .interior-banner {
+    //min-height: 250px;
+    .title-page{
+      left: 15px;
+    }
+  }
+  .interior-banner .title-page{
+
+    h1{
+      font-size: 35px;
+      line-height: 1.2;
+    }
+  }
+}
+@include mediaqueries(576max) { 
+  .interior-banner{
+    min-height: 200px;
+  }   
+  .interior-banner .title-page{
+    
+    h1{
+      font-size: 35px;
+      line-height: 1.2;
+    }
+  }
+}

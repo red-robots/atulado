@@ -1,0 +1,322 @@
+.sign-up-form{
+  position: relative;
+  background: #ffffff;
+  padding: 300px 0 0;
+  overflow: hidden;  
+  margin-top: -110px;
+  .bg-image-newsletter{
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 0;
+    img{
+      @include center(-50%, -50%);
+      height: auto;
+      left: 50%;
+      max-height: inherit;
+      max-width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      width: auto;
+    }
+    // &::after{
+    //   content: "";
+    //   // background-image: url('../images/texture-footer-interior-image.png');
+    //   // background-position: 50% 0%;
+    //   // background-size: auto 150%;
+    //   // background-repeat: repeat-x;
+    //   bottom: -33px;
+    //   height: 120px;      
+    //   position: absolute;
+    //   width: 100%;
+    // }
+  }
+  .container{
+    position: relative;
+  }
+  .box-container-form{
+    background-color: #ffffff;
+    border-bottom: solid 8px $blue-light;
+    margin: 0 !important;
+    padding: 30px 90px 38px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    .newsletter-message{
+      //padding-right: 30px;
+      h2{
+        @include font1;
+        color: #003f74;
+        font-family: Lato;
+        font-size: 28px;
+        font-stretch: normal;
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 1.57;
+        
+      }
+      p{
+        @include font1;
+        color: #003f74;
+        font-family: Lato;
+        font-size: 28px;
+        font-stretch: normal;
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 1.57;
+      }
+    }
+  }
+}
+
+/*START Sign Up--------------------------------------------------*/
+.sign-up-form{ 
+  .gform_wrapper{
+    //@include center(-50%,-50%);
+    //left: 50%;
+    //top: 50%;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    form{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;     
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start ;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; 
+    }
+    .gform_heading{
+      display: none;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%; 
+      margin: 0;
+      width: auto;
+      .gform_title{
+        @include font1;
+        font-size: 30px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #003f74;    
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+    .gform_body{           
+      margin: 0 0 15px !important;
+      width: 100%;
+      position: relative;
+      z-index: 1; 
+      ul.gform_fields{
+        padding-left: 0;
+        margin: 0;
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;     
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start ;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;     
+        li.gfield, li{
+          margin: 0 0 10px !important;
+          padding: 0 !important;
+          width: 100%;
+          &:first-child{
+            //flex-grow: 0;
+            //width: 245px;
+            //margin-right: 20px !important;
+          }
+          &:last-child{
+            //flex-grow: 1;
+          }
+          .gfield_label{
+            display: none;
+          }
+          .ginput_container {
+            margin:0 !important;
+             input{
+              //border-bottom: 1px solid #003f74 !important;      
+              background: transparent !important;
+              border-bottom: solid 0.5px #003f74!important;
+              border-radius: 0 !important;
+              border: none;
+              color: #003f74;
+              font-family: 'Lato', sans-serif !important;
+              font-size: 14px !important;
+              font-stretch: normal;
+              font-style: normal;
+              font-weight: normal !important;
+              height: auto; 
+              letter-spacing: normal!important;
+              line-height: normal;
+              min-height: auto;
+              padding: 12px 3px !important;
+              text-align: left;
+              width: 100% !important;
+              &::-webkit-input-placeholder { color: #003f74 ; opacity:1; }
+              &::-moz-placeholder { color: #003f74 ; opacity:1;; } /* firefox 19+ */
+              &:-ms-input-placeholder { color: #003f74 ; opacity:1; } /* ie */
+              &:hover, &:active, &:focus{
+                box-shadow: none;
+                outline: none;
+              }
+            }
+          }
+          .ginput_container_email{
+            //-webkit-box-flex: 2;
+            //-ms-flex-positive: 2;
+            //flex-grow: 2;
+            input{
+              //padding: 0 !important;
+              //padding-right: 45px !important;
+            }
+          }
+        }
+      }
+    }
+    .gform_footer{
+      margin: 0 !important ;
+      padding: 0 !important;
+      position: relative;
+      text-align: left;
+      transition: all 0.4s ease;
+      //right: 2px;
+      z-index: 99;
+      input.gform_button{ 
+        @include font3;
+        background-color: $blue;
+        border-radius: 25.5px;
+        border: none;
+        color: $white !important;
+        font-size: 18px !important;
+        font-stretch: normal!important;
+        font-style: normal!important;
+        font-weight: bold!important;
+        letter-spacing: normal!important;
+        line-height: 1;   
+        margin: 0;
+        opacity: 1;
+        padding: 10px 40px !important;
+        text-align: center;
+        text-transform: none;
+        transition: all 0.4s ease;
+        width: auto!important;
+        white-space: normal;
+        &:hover{ 
+          text-decoration: none;
+        }
+      }
+    }
+    .gfield_description{
+      display: none;
+    }
+    div.validation_error {
+      margin-bottom: 0;
+      position: absolute;
+      top: -50px;
+      width: auto;
+      right: 0;
+      background: #790000;
+      color: #fff;
+      padding: 0 10px;
+    }
+  }
+  .gform_confirmation_wrapper{
+    float: none;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+
+@include mediaqueries(1200max) {
+  
+}
+@include mediaqueries(991max) {  
+  .sign-up-form .box-container-form{
+    padding: 40px 20px;
+    margin: 0 auto !important;
+  }
+}
+@include mediaqueries(767max) {
+  .sign-up-form .gform_wrapper .gform_body, .form-subscribe-artist .gform_wrapper .gform_body{
+    width: 100%;
+  }
+  .sign-up-form , .form-subscribe-artist {
+    .gform_wrapper{
+      width: 100%;
+      form{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;    
+        .gform_footer{
+          margin-bottom: 20px !important;
+        }
+      } 
+    }
+  }
+}
+@include mediaqueries(576max) {
+  body.page{
+    .sign-up-form{
+      padding: 100px 0 0;
+    }
+  }
+  body.home{
+    .sign-up-form{
+      padding: 200px 0 0;
+    }
+  }
+  .sign-up-form .gform_wrapper .gform_body {
+    width: 100%;
+    display: block;
+    ul.gform_fields{
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      li.gfield{
+        flex-grow: 0;
+        width: 100%;
+      }
+      li.gfield:first-child{
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 5px !important;
+      }
+    }
+  }
+  .sign-up-form .box-container-form .newsletter-message p{
+    font-size: 24px;
+  }
+}
+@include mediaqueries(320max) {
+  
+}
+/*END Sign Up------------------------------------------*/

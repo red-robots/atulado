@@ -1,0 +1,234 @@
+.accordion{
+  br{
+    display: none;
+  }
+}
+h1[id*="accordion-"], 
+h2[id*="accordion-"],
+h3[id*="accordion-"],
+h4[id*="accordion-"],
+h5[id*="accordion-"],
+h6[id*="accordion-"]{
+    background: transparent;
+    border-bottom: 3px solid $blue;
+    color: $dark-text;
+    cursor:pointer;
+    margin-bottom: 0;
+    outline: none;
+    padding: 15px 0;
+    position: relative; 
+    transition: all 0.4s ease;
+    &.open{
+      font-weight: bold;
+    }
+    &.accordion-title{
+      font-size: 25px;
+      margin-bottom: 0;
+      outline: none;
+      padding-right: 20px;
+      &::after{
+        content: "\f067";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: $blue;     
+        display: inline-block;
+        font-size: 17px; 
+        margin-right: 10px;    
+        position: absolute;      
+        right: 0;
+        top: calc(50% -  10px); 
+      }
+      &.open{
+        &::after{
+           content: "\f068";
+        }
+      }
+    }
+  }
+  .accordion-content{
+    @include font2;
+    background: $blue;
+    border: none;    
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: left;
+    color: $white !important;
+    font-weight: normal;
+    letter-spacing: 0.9px;
+    line-height: 1.67;
+    padding: 10px 30px !important;
+    p, h3, h2,h4,h5,h6,a,span,strong, em{
+      color: $white !important;
+    }
+  }
+
+.accordion-bottom{
+  h2{
+    margin-top: 0 !important;
+  }
+  .panel-default{
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 15px;
+   }
+   .panel-heading{
+     position: relative;
+     h1, h2, h3, h4, h5, h6{
+      @include font2;
+      text-transform: none;
+     }
+   }
+   .panel-title{
+     @include font1;
+     font-size: 24px;
+     margin: 0;
+     padding: 15px 0;  
+     &::before{
+       content: "";
+       background: transparent url('../images/accordion-arrow.png') no-repeat;
+       display: none;
+       height:  20px;
+       left: 15px;
+       position: absolute;
+       top: 10px;
+       width: 20px;
+     }
+   }
+   .panel-body{
+     background: transparent;
+     color: $blue-dark;
+     border: 3px solid $blue;
+     padding: 1rem;
+     h2{
+       text-align: left;
+       color: $blue-dark;
+     }
+     h3{
+       color: $blue-dark;
+     }
+     p{
+       font-size: 1rem;
+       font-weight: 400;
+       color: $text;
+     }
+   }
+   a{
+    text-decoration: none !important;
+     .panel-heading{
+       background: $blue;
+       transition: 0.4s;
+       position: relative;
+       display: flex;
+       align-items: center;
+       &::before{
+        content: "\f077";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: $blue;     
+        display: inline-block;
+        font-size: 17px; 
+        margin-right: 10px;    
+        position: absolute;      
+        right: 0;
+        top: calc(50% -  10px);  
+       }
+       .panel-title{
+         transition: 0.4s;
+         position: relative;
+         text-decoration: none !important;
+         &:hover{
+          // color: $secondary;
+         }
+         &::after{
+           content: "";
+           background: $secondary;
+           color: $blue;
+           width: 20px;
+           height: 20px;
+           position: absolute;
+           right: 0;
+           font-size: 25px;
+           top: 0px;
+           right:  20px;
+           display: none;
+         }
+       }
+     }
+     &.collapsed{
+       .panel-heading{
+         background: $blue;
+         transition: 0.4s;
+         position: relative;
+         display: flex;
+         align-items: center;
+         &::before{
+          content: "\f078";
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          /*--adjust as necessary--*/
+          color: $blue;     
+          display: inline-block;
+          font-size: 17px; 
+          margin-right: 10px;    
+          position: absolute;      
+          right: 0;
+          top: calc(50% -  10px);  
+         }
+         .panel-title{
+           tansition: 0.4s;
+            &:hover{
+            // color: $secondary;
+           }
+           &::after{
+             content: "";
+             background: $blue-dark;
+             color: $secondary;
+             width: 20px;
+             height: 20px;
+             position: absolute;
+             right: 0;
+             font-size: 25px;
+             top: 0px;
+             right:  20px;
+           }
+         }
+       }
+     }
+   }
+}
+
+@include mediaqueries(991max) {
+  
+}
+@include mediaqueries(767max) {
+  .ugb-accordion__heading{
+    padding: 10px 15px !important;
+    h1[id*="accordion-"], 
+    h2[id*="accordion-"],
+    h3[id*="accordion-"],
+    h4[id*="accordion-"],
+    h5[id*="accordion-"],
+    h6[id*="accordion-"]{
+      padding: 0;
+      font-size: 18px !important;
+      line-height: 1.2 !important;
+      border-bottom: none;
+    }
+  }
+}
+@include mediaqueries(480max) {
+ 
+}
+@include mediaqueries(320max) {
+
+}

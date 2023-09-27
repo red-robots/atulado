@@ -1,0 +1,197 @@
+/*START Helper Classes------------------------------------------*/
+.addtoany_content{
+ .addtoany_header{
+   font-size: 20px;
+   color: $black;
+   font-weight: 400;
+   display: inline-block;
+   @include font2;
+   margin: 0;
+   text-transform: uppercase;
+   vertical-align: middle;
+ }
+ .a2a_kit{
+   a{
+     span{
+       background: transparent !important;
+       color: $black !important;
+       width: 24px!important;
+       height: 24px !important;
+       svg{
+         path{
+           fill: $black !important;
+         }
+       }
+     }
+   }
+ }
+}
+
+.col-align-vertical{
+  /*Flex*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+    float: none;
+}
+.alignleft{
+  float:left;
+  margin:0 15px 15px 0;
+}
+.alignright{
+  float:right;
+  margin:0 0 15px 15px;
+}
+.aligncenter{
+  display:block;
+  margin:0 auto;
+}
+.m-bottom{
+  margin-bottom:25px;
+}
+.m-top{
+  margin-top:25px;
+}
+.m-left{
+  margin-left:25px;
+}
+.m-right{
+  margin-right:25px;
+}
+.img-wrap{
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  height: 250px;
+  width: 100%;
+  background: transparent;
+  img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    @include center(-50%,-50%);
+    max-height: inherit;
+    min-width: inherit;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+div.printfriendly{
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+
+#bbp-search-form{
+  margin-bottom: 15px;
+  input#bbp_search_submit{
+    display: inline-block;
+    padding: 5px 15px;
+  }
+}
+#bbpress-forums div.bbp-breadcrumb { 
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  p{
+    margin-bottom: 0;
+  }
+}
+#subscription-toggle{
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  margin-left:15px;
+  .subscription-toggle{
+    @include font1;      
+    background: $principal;
+    border-radius: 5px;
+    color:#fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 800;
+    margin:0 auto; 
+    max-width: 100%;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: none;
+    &:hover,&:focus,&:active{
+      background:#fff;
+      text-decoration: none;
+      color:$principal !important;
+    }
+  }
+}
+
+.follow{
+  padding: 20px;  
+  ul.social{      
+    display: inline-block;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+     li{
+      @include font3;
+      color: $light-text;
+      display: inline-block;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      margin: 0px !important;
+      vertical-align: middle;
+      a{
+        border-radius: 50%;
+        border: 2px solid $light-text;
+        color: $light-text;
+        display: inherit;
+        height: 35px;
+        margin:0 5px;
+        position: relative;
+        transition:0.4s;
+        width: 35px;
+        i{
+          @include center(-50%,-50%);
+          font-size: 18px;
+          left:50%;
+          position: absolute;
+          top:50%;
+        }
+        &:hover{
+          background: $light-text;
+          color: $text;
+          box-shadow: none;
+          i{
+            background: transparent;
+            text-shadow: none;              
+          }
+        }
+      }
+    } 
+  } 
+}
+
+@include mediaqueries(991max) {
+ 
+}
+@include mediaqueries(767max) {
+ 
+}
+@include mediaqueries(480max) {
+
+}
+
+/*END Helper Classes-------------------------------------*/

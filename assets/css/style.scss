@@ -1,0 +1,159 @@
+@import "../scss/__mixins";
+@import "../scss/__media-queries";
+@import "../scss/__colors";
+@import "../scss/__fonts";
+@import "../scss/__buttons";
+@import "../scss/__footer";
+@import "../scss/__header";
+@import "../scss/__boxes-footer";
+@import "../scss/__instagram-feed";
+@import "../scss/home-page/a_slider";
+@import "../scss/home-page/b_welcome";
+@import "../scss/home-page/c_carousel";
+@import "../scss/home-page/d_partner";
+@import "../scss/home-page/e_stories";
+@import "../scss/home-page/f_join-us";
+@import "../scss/_gravityForm-default";
+@import "../scss/_gravityForm-sign-up";
+@import "../scss/_interior-banner";
+@import "../scss/_interior-comments";
+@import "../scss/_interior-ctgry-blog";
+@import "../scss/_interior-pages";
+@import "../scss/_interior-sidebar";
+@import "../scss/_meta-data-filter";
+@import "../scss/_page-404";
+@import "../scss/_popup-maker";
+@import "../scss/_search-page";
+@import "../scss/_single-blog";
+@import "../scss/_social-networks";
+@import "../scss/_tribe-events_calendar-list";
+@import "../scss/breadcrumbs";
+@import "../scss/error";
+@import "../scss/helpers";
+@import "../scss/pagination";
+@import "../scss/search";
+@import "../scss/_unite-gallery";
+@import "../scss/_accordion";
+@import "../scss/_team-bios";
+//@import "../scss/_ajaxsearch-plugin";
+
+
+
+
+/*START html & body-------------------------------------*/
+
+html,body{
+  @include font1;
+  color:$text;
+  font-size:16px;
+  line-height: 1em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  a{
+    line-height: 1em;
+    outline: none !important;
+  }
+  h1, h2, h3, h4, h5, h6{
+    @include font2;
+    font-weight: 700;
+    line-height: 1em;
+  }
+  p{
+    line-height: 1em;
+  }
+  .classic-text-widget{
+    display: inline-block !important;
+  }
+  .selector-for-some-widget {
+    box-sizing: content-box;
+  }
+  /*a[class^="btn-"]{
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3.12;
+    letter-spacing: normal;
+    color: #00a6bc;
+  }*/
+}
+.ui-loader.ui-corner-all.ui-body-a.ui-loader-default{
+  display: none;
+}
+
+/*END html & body-------------------------------------*/
+/*START FrontPage (similar elements)-------------------------------------------*/
+body.home{
+  h2{
+    @include font1;
+    display: inline-block;
+    font-size: 40px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 1.3;
+  }
+  .container-text {
+    padding: 0 10%;
+    &.center{
+      text-align: center;
+    }
+  }
+  p{
+    @include font2;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+  }
+} 
+body{
+  figure{
+    margin-bottom: 0 !important;
+  }  
+}
+
+.frame-image{
+  height: auto;
+  box-shadow: -4px 3px 13px 0 rgba(33, 33, 33, 0.25);
+  padding: 23px; 
+  background-color: #ffffff;
+  figure{
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 75%;
+    margin: 0 !important;
+  }
+}
+
+.grid_circles#sc_our_team .sc_team_member .sc_team_member_jobtitle,
+.grid_circles#sc_our_team .sc_team_member .sc_team_member_name{
+  height: unset;
+  line-height: 1.3;
+}
+
+/*END FrontPage-------------------------------------------*/
+
+/* Media queries----------------------------------*/
+
+@include mediaqueries(1200max) {
+  
+}
+@include mediaqueries(991max) {
+  
+}
+@include mediaqueries(767max) {
+  body.home h2{
+    font-size: 35px;
+  }
+  body.home .contain-section {
+    padding: 0 15px;
+  }
+}
+@include mediaqueries(480max) {
+  
+}

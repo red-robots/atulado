@@ -1,0 +1,48 @@
+
+ul.breadcrumbs{
+  margin-bottom: 5px;
+  padding: 0px;
+  text-transform: uppercase;
+  li{
+    display: inline-block;
+    margin-right: 10px;
+    strong{
+      @include font1;
+      color: #0aaacb;
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom:0;
+    }
+    &.separator{
+      color:transparent;
+      font-size: 0px;
+      &::after{
+        content: "\f054";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: #0aaacb;
+        display: inline-block;  
+        font-size: 0.9rem;
+        position: relative;
+      }
+    }
+    a{
+      @include font1;
+      color: #292929;
+      font-size: 15px;
+      font-weight: 300;
+      font-weight: unset;
+      margin-bottom: 0;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &.last-child{
+      color: #0aaacb;
+    }
+  }
+}

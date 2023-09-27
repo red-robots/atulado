@@ -1,0 +1,163 @@
+.floating-buttons-popup{
+	position: fixed;
+	top: 50%;
+	left: 0;
+	z-index: 99;
+	a{
+		padding: 10px 15px;
+		border-radius: 30px;
+		color: #fff;
+		background: $blue;
+		text-align: center;
+		display: block;
+		margin-bottom: 10px;
+		font-weight: 700;
+	}
+}
+.pum-theme-default-theme{
+	background-color: rgba(21,21,21,0.7) !important;
+}
+
+.pum-theme-768 .pum-container, .pum-theme-777 .pum-container,
+.pum-theme-default-theme .pum-container{
+	.pum-close.popmake-close{
+		@include font1;
+		background-color: transparent;
+		border: none;
+		font-size: 50px;
+		height: inherit;
+		line-height: 1em;
+		padding: 0;
+	}
+}
+.pum-theme-default-theme .pum-container{
+	padding: 0;
+	text-align: center;
+}
+.pum-theme-768, .pum-theme-777{
+	border-radius: 6px;
+	.pum-container{
+		padding: 0 !important;
+		background-color: #fff;	
+	}
+	.pum-content{
+		text-align: center;
+		h2{
+			@include font3;
+			color: #0eb08c;
+			font-size: 40px;
+			font-weight: 400;
+			padding: 0 30px;
+			margin: 10px 0 10px;
+		}
+		p{
+			@include font1;
+			color: #303030;
+			font-size: 18px;
+			font-weight: 400;
+			padding: 0 30px;
+			margin: 0 0 20px;
+		}
+
+	}
+	.gform_wrapper form {
+    text-align: center;
+    .gform_body ul.gform_fields li.gfield{
+    	padding: 0;
+    	margin: 0;
+   	  label{
+     	 	display: none;
+    	}
+  	  input{
+				font-size: 17px !important;
+		    border-radius: 30px;
+		    margin: 15px auto;
+		    text-align: center;
+		    width: 75%;
+  	  	padding: 10px 30px !important;
+			}
+    }
+    .gform_footer{
+    	margin: 0;
+    	padding: 0;
+			input[type="submit"]{
+				background: #f7863d;
+				color: #fff;
+				text-transform: none;		
+				font-size: 21px;		
+				margin: 5px auto 0;
+		    width: 75%;
+			}
+    }
+  }
+} 
+.pum-theme-777 .btn-orange{
+	color: #f7863d !important;
+	font-size: 20px !important;
+	padding: 13px 30px !important;
+	text-transform: none !important;
+}
+.pum-theme-768 .pum-content, .pum-theme-777 .pum-content{
+	padding-bottom: 40px;
+
+}
+/*Join Pop UP*/
+#popmake-774{
+	background: url('../images/shutterstock_207492568.jpg') 50% 50%;
+	background-size: cover;
+	width: 810px !important;
+	max-width: 80% !important;
+	border-radius: 6px;
+	&::before{
+		content: "";
+		background: rgba(21,21,21,0.35);
+		background: -moz-linear-gradient(left, rgba(21,21,21,0.35) 0%, rgba(255,255,255,0.35) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(21,21,21,0.35)), color-stop(100%, rgba(255,255,255,0.35)));
+		background: -webkit-linear-gradient(left, rgba(21,21,21,0.35) 0%, rgba(255,255,255,0.35) 100%);
+		background: -o-linear-gradient(left, rgba(21,21,21,0.35) 0%, rgba(255,255,255,0.35) 100%);
+		background: -ms-linear-gradient(left, rgba(21,21,21,0.35) 0%, rgba(255,255,255,0.35) 100%);
+		background: linear-gradient(to right, rgba(21,21,21,0.35) 0%, rgba(255,255,255,0.35) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#ffffff', GradientType=1 );
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		border-radius: 6px;
+		left:0;
+		z-index: 0
+	}
+	 .pum-content{
+		width: 50%;
+		padding-top: 40px;
+		position: relative;
+		z-index: 10;
+		p{
+			margin: 0;
+		}
+		img{
+			width: 180px;
+		}
+		h2{
+			@include font3;
+			color: #fff !important;
+			font-size: 35px;
+			line-height: 1em;
+		}
+		a{
+			@include font1;
+			color: #fff;
+			font-size: 18px;
+			marign-top: 30px;
+			text-decoration: underline;
+		}
+		.gform_wrapper form .gform_body ul.gform_fields li.gfield input, .pum-theme-777 .gform_wrapper form .gform_body ul.gform_fields li.gfield input{
+			background: $white;
+			margin: 10px auto;				
+		}
+	}
+	.pum-close.popmake-close{
+		color: #009ece !important;
+		font-size: 40px !important;
+	}
+
+}

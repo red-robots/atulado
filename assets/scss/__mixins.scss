@@ -1,0 +1,74 @@
+
+//START Mixins---------------------------------------------------*/
+
+@mixin resize($x,$y){
+  -webkit-transform: scale($x, $y);
+     -moz-transform: scale($x, $y);
+      -ms-transform: scale($x, $y);
+          transform: scale($x, $y);
+}
+@mixin rotate($x){
+  -webkit-transform: rotate($x);
+     -moz-transform: rotate($x);
+      -ms-transform: rotate($x);
+          transform: rotate($x);
+}
+@mixin rotateY($x){
+  -webkit-transform: rotateY($x);
+     -moz-transform: rotateY($x);
+      -ms-transform: rotateY($x);
+          transform: rotateY($x);
+}
+@mixin center($x,$y){
+   -webkit-transform: translate($x, $y);
+     -moz-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+@mixin closeup($x,$y,$z,$t){
+  -webkit-transform: translate($x, $y) scale($z);
+     -moz-transform: translate($x, $y) scale($z);
+      -ms-transform: translate($x, $y) scale($z);
+          transform: translate($x, $y) scale($z);
+  -webkit-transition: $t ease-in-out;
+     -moz-transition: $t ease-in-out;
+      -ms-transition: $t ease-in-out;
+          transition: $t ease-in-out;
+}
+@mixin skewX($x){
+  -webkit-transform: skewX($x);
+     -moz-transform: skewX($x);
+      -ms-transform: skewX($x);
+          transform: skewX($x);
+}
+@mixin blur($x){
+  -webkit-filter: blur($x); 
+     -moz-filter: blur($x);
+      -ms-filter: blur($x);
+          filter: blur($x);
+}
+
+/* Standard syntax */
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+ 40% {-webkit-transform: translateY(-15px);}
+ 60% {-webkit-transform: translateY(-5px);}
+}
+ 
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateY(-15px);}
+ 60% {-moz-transform: translateY(-5px);}
+}
+ 
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 40% {-o-transform: translateY(-15px);}
+ 60% {-o-transform: translateY(-5px);}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 40% {transform: translateY(-15px);}
+ 60% {transform: translateY(-5px);}
+}
+//END Mixins*/

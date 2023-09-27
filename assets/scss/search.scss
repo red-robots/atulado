@@ -1,0 +1,110 @@
+/*STRART Search Widget------------------------------------------*/
+body.search{
+  h1{
+    span{
+      font-size: inherit;
+    }
+  }
+}
+.search-section{
+  display: none;
+  background: $principal;
+}
+div.search{
+  @include font1;
+  background: $principal;
+  display: block;
+  float: none;
+  position: relative;
+  vertical-align: middle;
+  &::before{
+    content: "";
+    background: $principal;
+    opacity: 0.5;
+    height: 100%;
+    left:0;
+    position: absolute;
+    top:0;
+    width: 1px;
+  }
+  &::after{
+    content: "";
+    background: $principal;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+    right:0;
+    top:0;
+    width: 1px;
+  }
+  .screen-reader-text{
+    display: none;
+  }
+ .fa-times{
+    color:$white;
+    cursor:pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+    &:hover{
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+  #searchsubmit{
+    background: transparent url("../images/search.png") no-repeat;
+    background-color:transparent;
+    background-position: center;
+    background-size:24px 24px; 
+    border-radius:0;
+    border:none;
+    color:#fff;
+    font-size: 12px;
+    height: 40px;
+    margin-left: -4px;
+    opacity: 0.7;
+    text-indent: -99999999px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    transition:0.4s;
+    vertical-align: middle;
+    width: 50px;
+    &:hover{
+      background-size:18px 18px;
+      opacity: 1; 
+    }
+  }
+  #s{
+    background: transparent;
+    border: none;
+    color:#fff;
+    font-size: 16px;
+    height: 40px;
+    padding: 5px 15px;
+    vertical-align: middle;
+    width: calc(100% - 55px);
+    &:hover, &:focus, &:active{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #fff;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+  }
+}
+@include mediaqueries(767max) {
+  div.search #s{
+    height: 40px;
+  }
+}
+/*END Search Widget------------------------------------------*/

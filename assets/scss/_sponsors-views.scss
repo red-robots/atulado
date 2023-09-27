@@ -1,0 +1,160 @@
+h2.center-title{
+	@include font3;
+	color: #04d282;
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+}
+hr.solid{
+	border-color:#e8e8e8;
+	border-style: solid;
+	width: 80%;
+	margin: 20px auto 50px;
+}
+.sponsor-vGrid{
+	padding: 40px 0 50px;
+	.single-sponsor{
+		border: 1px solid #baada5;
+		margin: 0 10px 60px 0;
+		max-width: 100%;
+		padding: 20px 15px;
+		text-align: center;
+		flex-basis: 280px;
+		flex-grow: 0;
+		.featured-sponsor-images{
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: auto auto;
+			display: block;
+			height: 110px;
+			margin: 0 auto 10px;
+			width: 200px;
+		}
+    p{		  
+      color: #292929;
+		  line-height: 1.2em;
+      font-size: 15px;
+      margin-bottom: 20px;
+      text-align: center !important;
+    }
+    .btn-blue{
+    	@include font1;      
+	    background: #0165ae;
+	    border-radius: 30px;
+	    border: none;
+	    color: #fff;
+	    display: inline-block;
+	    font-size: 16px;
+	    font-weight: 700;
+	    line-height: 1em;
+	    margin: 10px auto; 
+	    max-width: 100%;
+	    padding: 12px 20px;
+	    position: relative;
+	    text-align: center;
+	    text-decoration: none !important;
+	    text-transform: uppercase;
+	    transition: all 0.4s ease;
+    }
+	}
+}
+
+.sponsor-vList{
+	padding: 40px 0 50px;
+	.single-sponsor{
+		margin: 0 10px 30px 0;
+		max-width: 100%;
+		padding: 20px 15px;
+		text-align: center;
+		//flex-basis: 180px;		
+		.featured-sponsor-images{
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: auto auto;
+			display: block;
+			height: 110px;
+			margin: 0 auto 10px;
+			width: 200px;
+		}
+		a{
+			display: block;
+			text-decoration: none;
+		}
+	}
+}
+/*sponsor Carousel view (template: Our Partners - class="sponsor-vCarousel")*/
+.sponsor-vCarousel{
+	padding: 50px 0 100px;
+	#carousel__sponsor{
+		.carousel-inner{
+      margin: 0 auto;      
+      width: 90%;
+      .carousel-item{
+				min-height: 100px;
+      }
+    }
+    .carousel-control-next, .carousel-control-prev{
+      width: 5%;
+      .carousel-control-next-icon, .carousel-control-prev-icon {
+        background-image: url('../images/arrow-sponsors.png');
+        background-color: transparent;
+        background-size: auto;
+        height: 41px;
+        width: 41px;
+      }
+      .carousel-control-next-icon{
+        @include rotate(180deg);
+      }
+    }
+		.single-sponsor{
+			display: inline-block;
+      flex-basis: 19%;
+      flex-grow: 0;
+      padding: 0;
+			.featured-sponsor-images{
+				transition: all 0.4s ease;
+				text-align: center;
+				img {
+			  	-webkit-filter: grayscale(1);
+				  filter: grayscale(1);
+				}
+				&:hover{
+					.featured-sponsor-images img{
+						-webkit-filter: grayscale(0);
+				  	filter: grayscale(0);
+					}
+				}
+			}
+			a{
+				display: block;
+				text-decoration: none;
+				transition: all 0.4s ease;
+				&:hover{
+					.featured-sponsor-images img{
+						-webkit-filter: grayscale(0);
+				  	filter: grayscale(0);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mediaqueries(1200max) {
+
+}
+@include mediaqueries(991max) {
+  .sponsor-vList .single-sponsor{
+  	margin: 0 30px 0;
+  }
+} 
+@include mediaqueries(767max) {
+	.sponsor-vCarousel #carousel__sponsor .single-sponsor{
+  	flex-basis: 45%;	
+  }  
+}
+@include mediaqueries(480max) {
+  .sponsor-vCarousel #carousel__sponsor .single-sponsor{
+  	flex-basis: 100%;	
+  }  
+}

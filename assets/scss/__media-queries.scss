@@ -1,0 +1,73 @@
+
+/*Viewport---------------------------------------------------------*/
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+
+
+    
+//Media queries---------------------------------------------*/
+
+@mixin mediaqueries($res) {
+    @if $res==1440max {
+        @media only screen and (min-width: 1370px) and (max-width: 1440px) {
+            @content;
+        }
+    }
+    @if $res==1370max {
+        @media only screen and (min-width: 1200px) and (max-width: 1370px) {
+            @content;
+        }
+    }
+    @if $res==1200max {
+        @media only screen and (min-width: 991px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $res==991max {
+        @media only screen and (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $res==767max {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $res==576max {
+        @media only screen and (max-width: 576px) {
+            @content;
+        }
+    }
+    @else if $res==480max {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+    }
+    @else if $res==320max {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
+    }
+}
+
+
+//END Media queries---------------------------------------------*/
