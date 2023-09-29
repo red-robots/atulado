@@ -35,7 +35,7 @@ if ( is_search() ){
     if( get_post_type()=='unfiltered' ) {
         $unfilteredBlogID = 1104;
         $singleImage = get_the_post_thumbnail_url($unfilteredBlogID);
-        $title = getPostTitle( get_the_ID() );
+        $title = getPostTitle( $unfilteredBlogID );
     }
 
     

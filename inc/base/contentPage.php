@@ -1,5 +1,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
+
+		<?php if( is_singular() && get_post_type()=='unfiltered' ) { ?>
+			<h1 class="entry-title"><?php echo getPostTitle( get_the_ID() ) ?></h1>
+		<?php } ?>
+
 		<?php 
 			if ( is_single() && 'post' == get_post_type() ){
 			  echo '<div class="title-page"><h2>' . get_the_title() . '</h2></div>';
