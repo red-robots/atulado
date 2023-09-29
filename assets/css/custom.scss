@@ -21,6 +21,10 @@ body.page-template-blog {
   }
   .content-page { min-height: 20em; }
 }
+body.single-unfiltered .interior-banner {
+  background-size: cover;
+  background-position: center;
+}
 .blog-feeds {
   padding-bottom: 80px;
   .content-page {

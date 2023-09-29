@@ -30,6 +30,11 @@ if ( is_search() ){
       	$singleImage = get_template_directory_uri() . '/assets/images/interior-banner.jpg';
     }
 
+    if( get_post_type()=='unfiltered' ) {
+        $unfilteredBlogID = 1104;
+        $singleImage = get_the_post_thumbnail_url($unfilteredBlogID);
+    }
+
     $title = get_the_title();
 }
 
