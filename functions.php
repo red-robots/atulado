@@ -389,13 +389,15 @@ add_filter( 'query_vars', 'add_query_vars_filter' );
 add_shortcode( 'blog_feeds', 'blog_feeds_func' );
 function blog_feeds_func( $atts ) {
   $a = shortcode_atts( array(
-    'perpage' => 10
+    'perpage' => 10,
+    'post_type'=>'post'
   ), $atts );
   $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : 10;
+  $post_type = (isset($a['post_type']) && $a['post_type']) ? $a['post_type'] : 'post';
   $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
   $args = array(
     'posts_per_page'=> $perpage,
-    'post_type'   => 'post',
+    'post_type'   => $post_type,
     'post_status' => 'publish',
     'paged'     => $paged
   );
@@ -418,7 +420,7 @@ function blog_feeds_func( $atts ) {
               <figure class="noimage"></figure>
               <?php } ?>
               <div class="text">
-                <h2><?php the_title() ?></h2>
+                <h2><?php echo getPostTitle( get_the_ID() ); ?></h2>
                 <div class="excerpt"><?php the_excerpt() ?></div>
                 <div class="postlink">
                   <a href="<?php echo get_permalink() ?>">Learn More</a>
@@ -447,6 +449,33 @@ function blog_feeds_func( $atts ) {
 
   return $output;
 }
+
+
+function getPostTitle($postId) {
+  global $wpdb;
+  $query = "SELECT post_title FROM ".$wpdb->prefix."posts WHERE ID=".$postId; 
+  $result = $wpdb->get_row($query);
+  return ($result) ?  $result->post_title : '';
+}
+
+//Password Protect programmatically
+function passwordProtectPosts($post_object) {
+  //Checks if current post is a specific custom post type
+  if ( $post_object->post_type!='unfiltered' ) {
+    return;
+  }
+  
+  //Checks if current post is from a specific category
+  
+  /*if (!in_category(array('protected'))) {
+  
+  return;
+  
+  }*/
+  $pwd = get_field('unfiltered_single_post_password','option');
+  $post_object->post_password = $pwd;
+  }
+  add_action('the_post', 'passwordProtectPosts');
 
 
 

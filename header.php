@@ -53,9 +53,7 @@
     }
 
     echo $googleAnalytics;
-
     ?> 
-
 </head>
 
 <body <?php body_class(); ?>>

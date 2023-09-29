@@ -17,7 +17,7 @@ if ( have_posts() ) : ?>
 		
     <?php if ( get_the_post_thumbnail_url() ) { ?>
     <section class="interior-banner blog-hero" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');">
-      <div class="container"><div class="title-page"><h1><?php the_title() ?></h1></div></div>
+      <div class="container"><div class="title-page"><h1><?php echo getPostTitle( get_the_ID() ); ?></h1></div></div>
     </section>
     <?php } ?>
 
@@ -33,30 +33,29 @@ if ( have_posts() ) : ?>
 
 	<?php endwhile; ?>
 
-
-
-  <script>
-    jQuery(document).ready(function($){
-      $(document).on('click', '.loadmore-button', function(e){
-        e.preventDefault();
-        var baseUrl = $(this).attr('data-baseurl');
-        var totalpage = $(this).attr('data-totalpages');
-        var nextpage = $(this).attr('data-next');
-        var loadUrl = baseUrl + '?pg=' + nextpage;
-        $('#hidden-content').load(loadUrl + ' .articles', function(){
-          if( $('#hidden-content article').length ) {
-            var nextcontent = $('#hidden-content .articles').html();
-            $('.content-page .articles').append(nextcontent);
-            var next = parseInt(nextpage) + 1;
-            $('.loadmore-button').attr('data-next',next);
-            if(next>totalpage) {
-              $('.loadmore-button').remove();
-            }
+<script>
+  jQuery(document).ready(function($){
+    $(document).on('click', '.loadmore-button', function(e){
+      e.preventDefault();
+      var baseUrl = $(this).attr('data-baseurl');
+      var totalpage = $(this).attr('data-totalpages');
+      var nextpage = $(this).attr('data-next');
+      var loadUrl = baseUrl + '?pg=' + nextpage;
+      $('#hidden-content').load(loadUrl + ' .articles', function(){
+        if( $('#hidden-content article').length ) {
+          var nextcontent = $('#hidden-content .articles').html();
+          $('.content-page .articles').append(nextcontent);
+          var next = parseInt(nextpage) + 1;
+          $('.loadmore-button').attr('data-next',next);
+          if(next>totalpage) {
+            $('.loadmore-button').remove();
           }
-        });
+        }
       });
     });
-  </script>
+  });
+</script>
 
-<?php endif; 
-get_footer();
+<?php endif; ?>
+
+<?php get_footer();
