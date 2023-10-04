@@ -389,7 +389,6 @@ jQ("body").keyup(function(e) {
    myOrientResizeFunction();
   });
 
-
   
 });
  

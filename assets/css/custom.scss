@@ -62,6 +62,7 @@ body.single-unfiltered .interior-banner {
         font-size: 35px;
         font-weight: 500;
         line-height: 1.2;
+        letter-spacing: 0.01em;
         margin:0 0 30px;
         color: #000;
       }
@@ -232,3 +233,48 @@ body.single-unfiltered {
     padding-top: 50px;
   }
 }
+
+
+@media screen and (max-width: 600px) {  
+  .blog-feeds {
+    padding-left: 0;
+    padding-right: 0;
+    article {
+      .inner {
+        box-shadow: none;
+        .featimage {
+          margin-bottom: 20px!important;
+        }
+      }
+      .text {
+        padding: 0 0;
+        h2, .excerpt, .postlink, p {
+          text-align: center;
+        }
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .interior-page .content-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  body.single-unfiltered {
+    .entry-title {
+      text-align: center;
+    }
+    .entry-content {
+      padding-left: 10px;
+      padding-right: 10px;
+      figure.wp-block-image {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
