@@ -422,8 +422,8 @@ function blog_feeds_func( $atts ) {
 
               <?php  
               $postId = get_the_ID();
-              $content = getPostData($postId);
-              $excerpt = ($content) ? shortenText( strip_tags($content), 300, ' ', '...') : '';
+              $content = getPostData($postId,'post_content');
+              $excerpt = ($content) ? shortenText( strip_tags($content), 330, '.', '...') : '';
               ?>
               <div class="text">
                 <h2><?php echo getPostTitle( $postId ); ?></h2>
@@ -469,12 +469,20 @@ function shortenText($string, $limit, $break = ".", $pad = "...") {
   return $string;
 }
 
-function getPostData($postId) {
+function getPostData($postId,$column=null) {
   global $wpdb;
-  $query = "SELECT post_content FROM ".$wpdb->prefix."posts WHERE ID=".$postId; 
-  $result = $wpdb->get_row($query);
-  return ($result) ?  $result->post_content : '';
+  $field = (empty($column)) ? '*' : $column;
+  $query = "SELECT ".$field." FROM ".$wpdb->prefix."posts WHERE ID=".$postId; 
+  if(empty($column)) {
+    $result = $wpdb->get_results($query);
+    return ($result) ?  $result : '';
+  } else {
+    $result = $wpdb->get_row($query);
+    return ($result) ?  $result->$column : '';
+  }
+  
 }
+
 
 function getPostTitle($postId) {
   global $wpdb;
@@ -496,10 +504,12 @@ function passwordProtectPosts($post_object) {
   return;
   }*/
 
-  $pwd = get_field('unfiltered_single_post_password','option');
+  //$pwd = get_field('unfiltered_single_post_password','option');
+  $unfilteredMainPageId = 1104;
+  $pwd = getPostData($unfilteredMainPageId,'post_password');
   $post_object->post_password = $pwd;
 }
-//add_action('the_post', 'passwordProtectPosts');
+add_action('the_post', 'passwordProtectPosts');
 
 
 
