@@ -164,6 +164,19 @@ background-image:url('<?php echo  $protectImgUrl?>')!important;
       }
 
     }
+
+    if( $('body').hasClass('single-unfiltered') ) {
+      if( $('.entry-content .wp-block-columns .wp-block-column').length ) {
+        var countColumn = $('.entry-content .wp-block-columns .wp-block-column').length;
+        $('.entry-content .wp-block-columns .wp-block-column').each(function(){
+          if( $(this).find('.wp-block-image').length ) {
+            $(this).parents('.wp-block-columns').addClass('has-featured-image');
+          }
+        });
+      }
+    }
+
+
   });
 </script>
 </body>

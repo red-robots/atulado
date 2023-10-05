@@ -232,6 +232,20 @@ body.single-unfiltered {
     padding-bottom: 50px;
     padding-top: 50px;
   }
+
+  .entry-content .wp-block-columns.has-featured-image {
+    @media screen and (max-width: 781px) {
+      flex-direction: column-reverse;
+      figure.wp-block-image {
+        width: 100%;
+        position: relative;
+        left: 0;
+        transform: none;
+        padding: 0 0;
+        margin: 0 0!important;
+      }
+    }
+  }
 }
 
 
@@ -268,13 +282,13 @@ body.single-unfiltered {
     .entry-content {
       padding-left: 10px;
       padding-right: 10px;
-      figure.wp-block-image {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 0 15px;
-      }
+      // figure.wp-block-image {
+      //   width: 100vw;
+      //   position: relative;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   padding: 0 15px;
+      // }
     }
   }
 }
