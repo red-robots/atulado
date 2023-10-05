@@ -419,9 +419,15 @@ function blog_feeds_func( $atts ) {
               <?php } else { ?>
               <figure class="noimage"></figure>
               <?php } ?>
+
+              <?php  
+              $postId = get_the_ID();
+              $content = getPostData($postId);
+              $excerpt = ($content) ? shortenText( strip_tags($content), 300, ' ', '...') : '';
+              ?>
               <div class="text">
-                <h2><?php echo getPostTitle( get_the_ID() ); ?></h2>
-                <div class="excerpt"><?php the_excerpt() ?></div>
+                <h2><?php echo getPostTitle( $postId ); ?></h2>
+                <div class="excerpt"><?php echo $excerpt ?></div>
                 <div class="postlink">
                   <a href="<?php echo get_permalink() ?>">Learn More</a>
                 </div>
@@ -450,6 +456,25 @@ function blog_feeds_func( $atts ) {
   return $output;
 }
 
+function shortenText($string, $limit, $break = ".", $pad = "...") {
+  if (strlen($string) <= $limit) return $string;
+  if (false !== ($max = strpos($string, $break, $limit))) {  
+    if ($max < strlen($string) - 1) {
+      
+      $string = substr($string, 0, $max) . $pad;
+      
+    }
+  }
+    
+  return $string;
+}
+
+function getPostData($postId) {
+  global $wpdb;
+  $query = "SELECT post_content FROM ".$wpdb->prefix."posts WHERE ID=".$postId; 
+  $result = $wpdb->get_row($query);
+  return ($result) ?  $result->post_content : '';
+}
 
 function getPostTitle($postId) {
   global $wpdb;
@@ -464,18 +489,17 @@ function passwordProtectPosts($post_object) {
   if ( $post_object->post_type!='unfiltered' ) {
     return;
   }
-  
+
   //Checks if current post is from a specific category
-  
+
   /*if (!in_category(array('protected'))) {
-  
   return;
-  
   }*/
+
   $pwd = get_field('unfiltered_single_post_password','option');
   $post_object->post_password = $pwd;
-  }
-  add_action('the_post', 'passwordProtectPosts');
+}
+//add_action('the_post', 'passwordProtectPosts');
 
 
 
