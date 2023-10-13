@@ -247,6 +247,10 @@ body.single-unfiltered {
     }
   }
 
+  .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+    padding-left: 0;
+  }
+
   #commentform {
     padding: 20px;
     background: #f7f7f7;
@@ -344,6 +348,30 @@ body.single-unfiltered {
   }
 }
 
+@media screen and (max-width: 820px) { 
+  body.single-unfiltered {
+    .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+    .wp-block-media-text .wp-block-media-text__media {
+      width: 100%;
+    }
+    .interior-page {
+      .container {
+        max-width: 90%;
+      }
+    }
+    .entry-content {
+      .wp-block-media-text {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {  
   .blog-feeds {
