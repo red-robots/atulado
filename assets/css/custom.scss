@@ -246,6 +246,102 @@ body.single-unfiltered {
       }
     }
   }
+
+  #commentform {
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    label {
+      display: block;
+      width: 100%;
+      margin: 0 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #000;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      height: 40px;
+      padding: 8px 12px;
+    }
+    .comment-form-cookies-consent {
+      display: flex;
+      input[type="checkbox"] {
+        margin: 0 6px 0 0;
+      }
+    }
+    [type="submit"] {
+      display: inline-block;
+      text-decoration: none;
+      background: #003f74;
+      color: #FFF!important;
+      padding: 8px 30px;
+      border-radius: 100px;
+      font-size: 20px;
+      letter-spacing: 0.05em;
+      transition: all ease .3s;
+      min-width: 50px;
+      text-align: center;
+      border: none!important;
+      &:hover, &:focus {
+        background: #61c7f1;
+      }
+    }
+  }
+
+  h3#comments {
+    border-top: 1px solid #003f74;
+    padding-top: 20px;
+  }
+
+  .commentlist {
+    li.comment {
+      position: relative;
+      display: flex;
+      padding-left: 0;
+      padding-bottom: 20px;
+      margin: 0 0 20px;
+      border-bottom: 1px dotted #CCC;
+      &:before {
+        position: relative;
+        margin-right: 8px;
+      }
+      .comment-awaiting-moderation {
+        margin-top: 5px;
+        display: block;
+        position: relative;
+        top: 12px;
+        color: #44aa8f;
+        font-size: 14px;
+      }
+      .comment-reply-link {
+        text-decoration: none;
+        background: #007ee7;
+        color: #FFF;
+        padding: 4px 16px 6px;
+        font-size: 15px;
+        border-radius: 100px;
+        &:hover, &:focus {
+          background: #73d4fc;
+        }
+      }
+      .comment-body {
+        font-size: 14px;
+        .commentmetadata,
+        .commentmetadata a,
+        p {
+          font-size: 15px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
 }
 
 
