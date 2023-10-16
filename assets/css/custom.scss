@@ -255,6 +255,11 @@ body.single-unfiltered {
     padding: 20px;
     background: #f7f7f7;
     border-radius: 10px;
+    .comment-notes {
+      #email-notes {
+        display: none;
+      }
+    }
     label {
       display: block;
       width: 100%;

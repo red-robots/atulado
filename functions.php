@@ -512,5 +512,37 @@ function passwordProtectPosts($post_object) {
 add_action('the_post', 'passwordProtectPosts');
 
 
+// Unset URL from comment form
+function crunchify_move_comment_form_below( $fields ) { 
+    $comment_field = $fields['comment']; 
+    unset( $fields['comment'] ); 
+    unset( $fields['url'] ); 
+    //unset( $fields['email'] ); 
+    unset( $fields['cookies'] ); 
+    $fields['comment'] = $comment_field; 
+    return $fields; 
+} 
+add_filter( 'comment_form_fields', 'crunchify_move_comment_form_below' ); 
+
+add_filter('comment_form_default_fields', 'email_filtered');
+function email_filtered($fields) {
+  if(isset($fields['email']))
+   unset($fields['email']);
+  return $fields;
+}
+
+// Add placeholder for Name and Email
+// function modify_comment_form_fields($fields){
+//     $fields['author'] = '<p class="comment-form-author">' .
+//                 '<label for="author">' . __( 'Name' ) . '</label> ' . 
+//                 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"  />' .
+//                 '</p>';
+    
+//     return $fields;
+// }
+// add_filter('comment_form_default_fields','modify_comment_form_fields');
+
+
+
 
 /* -------------------------------------------------  */
