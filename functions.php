@@ -346,7 +346,7 @@ function atuladoScripts() {
 	get_template_directory_uri() . '/assets/css/all.min.css');
 
   wp_enqueue_style( 'atuladoCustomCss',
-  get_template_directory_uri() . '/assets/css/custom.css');
+  get_template_directory_uri() . '/assets/css/custom.css?ver=2.0');
 
 	//wp_enqueue_script( 'kids4PeaceFontAwesomeJs','https://kit.fontawesome.com/2b6c4935bd.js', array( 'jquery' ), '', true);	
 	// wp_enqueue_script( 'kids4PeaceFontAwesomeJs',get_template_directory_uri() . '/assets/js/all.min.js', array( 'jquery' ), '', true);	
